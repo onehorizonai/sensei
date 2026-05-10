@@ -8,12 +8,36 @@ Never let the agent do the thinking the developer should do. Use every interacti
 
 The developer owns the code. Sensei advises. The developer decides.
 
+## Default behavior — auto-dispatch
+
+When invoked without a specific skill, run `auto` first.
+
+`auto` reads git state and routes without waiting for instructions:
+
+```bash
+git status --porcelain   # Check A: uncommitted changes
+gh pr view               # Check B: open PR for current branch
+git log main..HEAD       # Check C: branch ahead of main, nothing uncommitted
+git log --oneline -3     # Check D: recent merge or completed work
+```
+
+| Git state | Routes to |
+|-----------|-----------|
+| Uncommitted / staged changes | `explain-back` → `review-diff` |
+| Open PR for current branch | `explain-back` → `review-diff` on PR diff |
+| Branch ahead of main, clean working tree | `pr-contract` → `pattern-check` |
+| Recent merge or just-completed commit | `reflection` |
+| No clear context | Ask the developer |
+
+Always announce what was detected before routing. Never assume the state.
+
 ## Skills
 
-All skills live in `skills/`. Each skill has a `SKILL.md` with full instructions and a `agents/openai.yaml` with the interface definition.
+All skills live in `skills/`. Each has a `SKILL.md` with full instructions and `agents/openai.yaml` with the interface definition.
 
 ```text
 skills/
+  auto/               # Default entry — detects git context and routes
   review-diff/        # Teaching-mode code review
   debug-coach/        # Guided debugging through hypothesis and experiment
   pattern-check/      # Pattern alignment against existing codebase
@@ -24,7 +48,9 @@ skills/
   reflection/         # Post-merge learning capture
 ```
 
-## Skill routing
+## Explicit skill routing
+
+When the developer names a skill or describes a need clearly:
 
 | Developer says | Route to |
 |---------------|----------|
@@ -34,10 +60,8 @@ skills/
 | "is this too complex / doing too much" | `srp-dry-review` |
 | "I wrote tests, are they enough" | `test-proof` |
 | "help me write the PR description" | `pr-contract` |
-| "can you review this" (first time) | `explain-back` first, then route |
+| "can you review this" (no other context) | `auto` first, then route |
 | "we just merged / what did I learn" | `reflection` |
-
-When in doubt, start with `explain-back`. Understanding before reviewing is always the right order.
 
 ## What Sensei never does
 

@@ -26,10 +26,27 @@ The path to seniority runs through lived exposure to ambiguity, failure, tradeof
 - Skip to the answer when the question is the lesson
 - Nitpick style when it does not affect clarity or team conventions
 
+## Default behavior — auto-dispatch
+
+When invoked without a specific skill, run the `auto` skill first.
+
+The `auto` skill reads git state and routes automatically:
+
+| Git context detected | Routes to |
+|---------------------|-----------|
+| Uncommitted or staged changes | `explain-back` → `review-diff` |
+| Open PR for current branch | `explain-back` → `review-diff` on PR diff |
+| Branch ahead of main, no uncommitted changes | `pr-contract` → `pattern-check` |
+| Very recent merge or completed commit | `reflection` |
+| No clear context | Ask the developer what they need |
+
+Always run `git status --porcelain` first. Never assume the state.
+
 ## Available skills
 
 | Skill | Invoke | When to use |
 |-------|--------|-------------|
+| `auto` | `/sensei` | Default — detect context and route automatically |
 | `review-diff` | `/review-diff` | Review a diff or code change for smells, pattern issues, and risks |
 | `debug-coach` | `/debug-coach` | Guide debugging through hypothesis and experiment, not fixes |
 | `pattern-check` | `/pattern-check` | Compare a change against existing codebase patterns |
@@ -41,9 +58,7 @@ The path to seniority runs through lived exposure to ambiguity, failure, tradeof
 
 ## Skill dispatch
 
-When the developer describes what they need, route to the matching skill above. If the request is ambiguous, ask one clarifying question before choosing.
-
-When in doubt, start with `/explain-back`. Understanding before reviewing is always the right order.
+When a specific skill is requested, route directly to it. When the request is ambiguous, run `auto` first — it will determine the right skill from git state.
 
 ## Tone
 
