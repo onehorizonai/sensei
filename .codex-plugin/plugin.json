@@ -1,0 +1,40 @@
+{
+  "name": "sensei",
+  "description": "Senior Engineering Coach for junior developers. Makes experience denser through deliberate practice of judgment, debugging discipline, and pattern recognition.",
+  "version": "1.0.0",
+  "author": {
+    "name": "One Horizon"
+  },
+  "homepage": "https://onehorizon.ai",
+  "license": "MIT",
+  "keywords": [
+    "coaching",
+    "code-review",
+    "debugging",
+    "junior-developer",
+    "mentoring",
+    "patterns"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Sensei",
+    "shortDescription": "Senior Engineering Coach for junior developers.",
+    "longDescription": "Sensei does not write code quickly. It helps developers build senior engineering judgment through deliberate practice. Eight skills covering code review, debugging, pattern alignment, SRP/DRY analysis, test quality, PR communication, comprehension checks, and learning reflection.",
+    "developerName": "One Horizon",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://onehorizon.ai",
+    "defaultPrompt": [
+      "Review this diff with Sensei.",
+      "Help me debug this.",
+      "Does this follow our existing patterns?",
+      "Help me write the PR description.",
+      "Run a reflection on what I just shipped."
+    ],
+    "brandColor": "#0f0f1a",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

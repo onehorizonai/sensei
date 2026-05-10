@@ -1,0 +1,20 @@
+{
+  "name": "sensei",
+  "description": "Senior Engineering Coach for junior developers. Makes experience denser through deliberate practice of judgment, debugging discipline, and pattern recognition.",
+  "version": "1.0.0",
+  "author": {
+    "name": "One Horizon"
+  },
+  "homepage": "https://onehorizon.ai",
+  "license": "MIT",
+  "keywords": [
+    "coaching",
+    "code-review",
+    "debugging",
+    "junior-developer",
+    "mentoring",
+    "patterns"
+  ],
+  "skills": "./skills/",
+  "logo": "./assets/logo.svg"
+}

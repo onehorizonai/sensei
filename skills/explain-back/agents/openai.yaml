@@ -1,0 +1,6 @@
+interface:
+  display_name: "Explain Back"
+  short_description: "Ask the developer to explain the code before Sensei reviews it"
+  icon_small: "../../assets/logo.svg"
+  icon_large: "../../assets/logo.svg"
+  default_prompt: "Ask me to explain my code before reviewing it."

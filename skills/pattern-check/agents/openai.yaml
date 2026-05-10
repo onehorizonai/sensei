@@ -1,0 +1,6 @@
+interface:
+  display_name: "Pattern Check"
+  short_description: "Compare this change against existing codebase patterns and conventions"
+  icon_small: "../../assets/logo.svg"
+  icon_large: "../../assets/logo.svg"
+  default_prompt: "Check if this follows our existing patterns."

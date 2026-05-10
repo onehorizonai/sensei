@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review Diff"
+  short_description: "Teaching-mode code review — explains principles, not just problems"
+  icon_small: "../../assets/logo.svg"
+  icon_large: "../../assets/logo.svg"
+  default_prompt: "Review this diff with Sensei."

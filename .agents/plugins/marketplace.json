@@ -1,0 +1,22 @@
+{
+  "name": "sensei",
+  "owner": {
+    "name": "One Horizon"
+  },
+  "metadata": {
+    "description": "Senior Engineering Coach for junior developers.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "sensei",
+      "source": ".",
+      "description": "A Senior Engineering Coach that helps junior developers build judgment through deliberate practice. Eight skills: review-diff, debug-coach, pattern-check, srp-dry-review, test-proof, pr-contract, explain-back, reflection.",
+      "version": "1.0.0",
+      "author": {
+        "name": "One Horizon"
+      },
+      "license": "MIT"
+    }
+  ]
+}

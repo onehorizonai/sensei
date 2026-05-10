@@ -1,0 +1,24 @@
+{
+  "name": "sensei",
+  "description": "A Senior Engineering Coach that makes junior developers' experience denser through deliberate practice of judgment, debugging discipline, and pattern recognition. Sensei does not write code quickly. Sensei helps developers learn to think like seniors.",
+  "version": "1.0.0",
+  "author": {
+    "name": "One Horizon"
+  },
+  "homepage": "https://onehorizon.ai",
+  "license": "MIT",
+  "keywords": [
+    "coaching",
+    "code-review",
+    "debugging",
+    "junior-developer",
+    "engineering",
+    "mentoring",
+    "patterns",
+    "dry",
+    "srp",
+    "deliberate-practice"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
