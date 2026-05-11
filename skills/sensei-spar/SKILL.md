@@ -32,6 +32,8 @@ If the intent is obvious from the diff and filenames, start the review immediate
 
 Then read the context around changed code — not just the changed lines. A bug in a 3-line change is often explained by the 20 lines around it.
 
+When the diff touches multiple files, review code quality file-by-file. Group style, smell, pattern, and maintainability findings under the changed file they belong to; use a cross-file section only for issues like duplicated knowledge, architecture drift, security flow, or missing tests that genuinely span files.
+
 ## Severity definitions
 
 Every finding gets one label. Use these definitions strictly:
@@ -159,6 +161,8 @@ Open every review with this block:
 For each finding:
 
 ```
+## File: [path/to/file or Cross-file]
+
 ### [MUST FIX / SHOULD FIX / CONSIDER] — [Name in plain English]
 [One sentence anyone can understand: what the problem is and why it costs something]
 **What breaks:** [Specific consequence — what fails, gets corrupted, becomes a maintenance trap, or creates a security risk]

@@ -15,7 +15,7 @@ Keep the bar high on simplicity. A good plan should avoid code bloat, AI slop, c
 
 Ask the developer for the plan if it is not already present.
 
-If the plan is vague, ask for:
+If the plan is vague, collect these details:
 
 1. The behavior they want to change
 2. The files, modules, or layers they expect to touch
@@ -23,6 +23,8 @@ If the plan is vague, ask for:
 4. The main risk or unknown
 5. Whether the change touches sign-in, permissions, user data, secrets, or outside input
 6. How they expect to verify the change
+
+Collect those details one at a time. Ask the first missing question only, then wait for the developer's answer before asking the next.
 
 ## Specialist consultation
 

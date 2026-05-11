@@ -15,20 +15,23 @@ Before routing to review, debugging, or planning, Sensei needs to understand wha
 
 ## Opening
 
-Use this to open every help session:
+Use this to open every help session. Ask only the first question, then wait:
 
 ```
 What are you working on, and where are you stuck?
+```
 
-Tell me:
-1. What are you trying to do? (Not what the code does — what you are trying to accomplish.)
+Then collect the remaining context one question at a time:
+
+```
+1. What are you trying to do? Not what the code does — what are you trying to accomplish?
 2. Where exactly are you stuck or unsure? Point to the file, function, or decision.
 3. What have you already tried or looked at?
 4. What would "done" look like? How would you know this is solved or ready?
 5. Is this code you wrote, code you inherited, or code an AI generated?
 ```
 
-Do not skip question 5. Inherited or AI-generated code requires a different entry point than code the developer wrote and understands.
+Do not paste the list into the conversation. Do not skip question 5. Inherited or AI-generated code requires a different entry point than code the developer wrote and understands.
 
 ## After the answers
 
@@ -68,4 +71,4 @@ For the second group: slow down. Ask the targeted question. Do not skip to a ski
 - Do not route until you understand what the developer actually needs.
 - Do not diagnose, fix, or review in this skill. This skill finds the right door; the other skills open it.
 - If the developer says they used AI to generate the code, ask whether they can explain it before routing to review.
-- End with: "Tell me the one thing you're most unsure about."
+- End with one question: "Tell me the one thing you're most unsure about."
