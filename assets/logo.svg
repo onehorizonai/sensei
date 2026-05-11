@@ -7,7 +7,7 @@
     <path d="M0 0H100V54H0Z" fill="#F6DDA3" opacity=".72"/>
     <path d="M0 67C17 55 33 58 48 49C64 39 76 45 100 33V100H0Z" fill="#766B51" opacity=".72"/>
     <path d="M0 82C22 70 39 72 56 62C73 52 86 55 100 47V100H0Z" fill="#1D1D18" opacity=".9"/>
-    <circle cx="50" cy="44" r="39" fill="#D96F3D"/>
+    <circle cx="50" cy="50" r="39" fill="#D96F3D"/>
   </g>
-  <text x="50" y="72" text-anchor="middle" fill="#F6DDA3" font-family="Didot, 'Bodoni 72', 'Iowan Old Style', Georgia, serif" font-size="74" font-weight="500">S</text>
+  <text x="50" y="75" text-anchor="middle" fill="#F6DDA3" font-family="Didot, 'Bodoni 72', 'Iowan Old Style', Georgia, serif" font-size="74" font-weight="500">S</text>
 </svg>
