@@ -9,6 +9,8 @@ Analyze responsibilities, boundaries, abstractions, and duplicated knowledge.
 
 The bias is less code, clearer boundaries, and fewer moving parts.
 
+When reviewing more than one file, work file-by-file. Group smells under the file that owns the responsibility or knowledge, and use a cross-file section only when the smell is the relationship between files.
+
 ## Teaching DRY correctly
 
 DRY does not mean: never repeat a line of code.
@@ -98,9 +100,12 @@ Open with this block:
 For each smell found:
 
 ```
+## File: [path/to/file or Cross-file]
+
 ### [MUST FIX / SHOULD FIX / CONSIDER] — [Plain-English name — never just cite DRY/SRP/KISS without explaining]
 [One sentence: what the problem is and what it costs]
 **What breaks:** [Specific consequence — "if this rule changes, N files need updating and one will be missed" / "this is the second way to do X, and they'll drift"]
+**Where:** [file:line or range]
 **Do this:** [The smallest useful move: delete / inline / move / split — stated as a concrete action]
 
 > _For the curious: [Optional: the principle behind it (DRY means one authoritative source, SRP means one reason to change, etc.) and a reasoning question for developers who want to go deeper]_

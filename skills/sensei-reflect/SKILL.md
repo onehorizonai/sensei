@@ -17,40 +17,48 @@ This is also where patterns in feedback become visible. If the same gap appears 
 
 ## Questions
 
-Ask these in order. Let the developer answer in their own words:
+Ask these in order, one at a time. Let the developer answer in their own words before asking the next question. Never paste the full list into the conversation.
+Do not produce the reflection summary until the sequence is complete.
+
+Start with:
 
 ```
-1. What was the hardest part of this change to reason about?
-   [Not the hardest to write — the hardest to think through]
+What was the hardest part of this change to reason about?
 
-2. What was your first approach, and why did you change it?
+Not the hardest to write — the hardest to think through.
+```
+
+After each answer, ask the next unanswered question from this sequence:
+
+```
+1. What was your first approach, and why did you change it?
    [If they did not change it, why not? Were you confident or did you push through uncertainty?]
 
-3. What were the two main approaches you considered at the key decision point in this change,
+2. What were the two main approaches you considered at the key decision point in this change,
    and what made you choose this one?
    [If you did not face a decision point: what would have changed your approach?]
 
-4. What evidence made you comfortable shipping this?
+3. What evidence made you comfortable shipping this?
    [Tests, logs, manual checks, reviewer confidence, or a constraint that made the risk acceptable]
 
-5. Did this change touch any security-sensitive surface?
+4. Did this change touch any security-sensitive surface?
    [Sign-in, permissions, secrets, user data, customer account data, external input, logs, background jobs, or admin tools. If yes, what proved it was controlled?]
 
-6. What did the review catch that you missed?
+5. What did the review catch that you missed?
    - Was it a code smell?
    - A pattern mismatch?
    - A missing test case?
    - A logic error?
    - Something you did not know?
 
-7. What would you do differently if you started this over?
+6. What would you do differently if you started this over?
    [Be specific — not "I'd write better tests" but "I'd isolate the permission logic from the handler"]
 
-8. What specific skill do you want to practice in the next PR?
+7. What specific skill do you want to practice in the next PR?
    [Choose one: debugging discipline, DRY, responsibility design, pattern alignment, test quality,
    security awareness, PR communication, tradeoff reasoning, reading existing code before writing]
 
-9. Is there a concept from this change you still do not feel confident about?
+8. Is there a concept from this change you still do not feel confident about?
    [If yes, what would help: a focused read, a pair session, or another PR in the same area?]
 ```
 

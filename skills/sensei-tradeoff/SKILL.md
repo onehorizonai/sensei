@@ -25,6 +25,8 @@ If the decision depends on existing architecture, read the closest local files b
 
 ## The reasoning sequence
 
+Work through this sequence one question at a time. Do not paste the full sequence into the conversation.
+
 ### Step 1 — Name both options precisely
 
 ```
@@ -53,7 +55,7 @@ The constraints are not justifications for a pre-made decision. They are the act
 
 ### Step 3 — What does each optimize for, and what does it cost?
 
-For each option, ask:
+For each option, ask these one at a time:
 
 ```
 What does this approach make easy?
@@ -144,6 +146,7 @@ Close with:
 ## Rules
 
 - Do not express a preference before the developer has stated their reasoning.
+- Ask one question at a time and wait for the answer before moving to the next tradeoff step.
 - If the developer asks "which is better" without context: ask for constraints first.
 - If more than two options are presented: ask the developer to eliminate or group them before starting.
 - Never make the decision for the developer.

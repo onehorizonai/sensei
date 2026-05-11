@@ -15,9 +15,11 @@ A test suite that checks the happy path, mocks every dependency, and never tests
 
 The question is not: did the tests pass? The question is: what would have to be true about the code for these tests to catch a regression?
 
-Ask the developer to answer that question before reviewing the tests yourself.
+Ask the developer to answer that one question before reviewing the tests yourself.
 
 ## Questions to ask
+
+Use these as an internal checklist. If you need input from the developer, ask one question at a time and wait for the answer.
 
 **What does each test actually verify?**
 - Is it testing the contract (inputs and outputs) or the implementation (internal calls)?

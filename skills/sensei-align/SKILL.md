@@ -19,6 +19,8 @@ Pattern alignment is not about conformity. It is about keeping the codebase legi
 
 Less is more here too. A new pattern has to earn its place. If the existing code already has a boring solution, prefer that unless the developer can explain why it no longer fits.
 
+When checking multiple changed files, work file-by-file. Group pattern divergences under the changed file they belong to, and use a cross-file section only when the divergence is the relationship between files.
+
 ## Questions to answer
 
 **Have we done something similar before?**
@@ -76,6 +78,8 @@ Open with this block:
 For each divergence found:
 
 ```
+## File: [path/to/file or Cross-file]
+
 ### [MUST ALIGN / SHOULD ALIGN / INTENTIONAL — DOCUMENT IT] — [Plain-English name of what differs]
 [One sentence: what is different and what it means for future maintainers]
 **What breaks:** [Concrete maintenance cost — two patterns to learn, security bypass risk, or hidden coupling]
