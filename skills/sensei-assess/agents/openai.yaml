@@ -1,4 +1,6 @@
 interface:
   display_name: "Sensei Assess"
   short_description: "Auto-detect context and route to the right Sensei skill."
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
   default_prompt: "Use $sensei-assess to detect my current context and route to the right skill."

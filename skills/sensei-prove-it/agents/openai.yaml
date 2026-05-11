@@ -1,4 +1,6 @@
 interface:
   display_name: "Sensei Prove It"
   short_description: "Evaluate what the tests actually prove and what they miss."
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
   default_prompt: "Use $sensei-prove-it to challenge my test coverage."

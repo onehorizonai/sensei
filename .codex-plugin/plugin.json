@@ -37,7 +37,7 @@
       "Compare these options before I decide."
     ],
     "brandColor": "#0f0f1a",
-    "composerIcon": "./assets/logo.svg",
-    "logo": "./assets/logo.svg"
+    "composerIcon": "./assets/logo-small.png",
+    "logo": "./assets/logo-large.png"
   }
 }

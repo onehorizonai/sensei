@@ -1,4 +1,6 @@
 interface:
   display_name: "Sensei Align"
   short_description: "Check a change against local codebase patterns."
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
   default_prompt: "Use $sensei-align to check if this change follows our existing patterns."

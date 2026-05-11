@@ -1,4 +1,6 @@
 interface:
   display_name: "Sensei Prune"
   short_description: "Guide safe, incremental refactoring."
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
   default_prompt: "Use $sensei-prune to help me refactor this safely."

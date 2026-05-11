@@ -1,4 +1,6 @@
 interface:
   display_name: "Sensei Tradeoff"
   short_description: "Compare options, costs, and reversibility."
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
   default_prompt: "Use $sensei-tradeoff to help me think through this decision."

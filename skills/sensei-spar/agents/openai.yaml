@@ -1,4 +1,6 @@
 interface:
   display_name: "Sensei Spar"
   short_description: "Review diffs for risks, smells, and test gaps."
+  icon_small: "./assets/icon-small.png"
+  icon_large: "./assets/icon-large.png"
   default_prompt: "Use $sensei-spar to review this diff."
