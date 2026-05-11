@@ -1,6 +1,0 @@
-interface:
-  display_name: "Reflection"
-  short_description: "Post-merge learning capture — what was learned and what to practice next"
-  icon_small: "../../assets/logo.svg"
-  icon_large: "../../assets/logo.svg"
-  default_prompt: "Run a reflection on what I just shipped."

@@ -4,28 +4,29 @@
     "name": "One Horizon"
   },
   "metadata": {
-    "description": "Senior Engineering Coach for junior developers. Makes experience denser through deliberate practice.",
+    "description": "Senior Engineering Coach for developers at any level, especially juniors building judgment through deliberate practice.",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "sensei",
       "source": ".",
-      "description": "A Senior Engineering Coach that helps junior developers build judgment through deliberate practice of code review, debugging discipline, pattern recognition, and tradeoff reasoning.",
+      "description": "A Senior Engineering Coach that helps developers at any level, especially juniors, build judgment through deliberate practice of code review, debugging discipline, pattern recognition, safe refactoring, and tradeoff reasoning.",
       "version": "1.0.0",
       "author": {
         "name": "One Horizon"
       },
-      "license": "MIT",
+      "license": "Apache-2.0",
       "keywords": [
         "coaching",
         "code-review",
         "debugging",
-        "junior-developer",
+        "developer-coaching",
         "mentoring",
         "patterns",
         "dry",
-        "srp"
+        "responsibility",
+        "architecture"
       ]
     }
   ]

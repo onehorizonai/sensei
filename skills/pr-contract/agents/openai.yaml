@@ -1,6 +1,0 @@
-interface:
-  display_name: "PR Contract"
-  short_description: "Write a PR description with intent, risks, verification, and reviewer focus"
-  icon_small: "../../assets/logo.svg"
-  icon_large: "../../assets/logo.svg"
-  default_prompt: "Help me write a strong PR description."

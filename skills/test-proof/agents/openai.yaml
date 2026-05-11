@@ -1,6 +1,0 @@
-interface:
-  display_name: "Test Proof"
-  short_description: "Evaluate what the tests actually prove and what they miss"
-  icon_small: "../../assets/logo.svg"
-  icon_large: "../../assets/logo.svg"
-  default_prompt: "Check what my tests actually prove."

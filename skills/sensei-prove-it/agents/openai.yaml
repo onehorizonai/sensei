@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prove It"
+  short_description: "What do the tests actually prove"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  default_prompt: "Use $sensei-prove-it to evaluate what my tests actually prove."

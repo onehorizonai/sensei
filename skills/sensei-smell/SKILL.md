@@ -1,0 +1,129 @@
+---
+name: sensei-smell
+description: Analyze code for responsibility, boundary, abstraction, code-bloat, and duplicated-knowledge problems. Use when a function or module seems to be doing too many things, when the same business rule appears in multiple places, when the developer asks about SRP, DRY, KISS, code smells, or whether code is too complex, or when reviewing whether a split or abstraction is justified.
+---
+
+# Responsibility Review
+
+Analyze responsibilities, boundaries, abstractions, and duplicated knowledge.
+
+The bias is less code, clearer boundaries, and fewer moving parts.
+
+## Teaching DRY correctly
+
+DRY does not mean: never repeat a line of code.
+
+DRY means: every piece of knowledge should have a single, authoritative representation in the system.
+
+### Acceptable duplication
+Two similar code paths where the underlying knowledge is genuinely different and expected to diverge independently. The duplication is structural coincidence, not shared intent.
+
+### Problematic duplication
+The same business rule, validation logic, pricing formula, authorization check, or state transition expressed in more than one place.
+
+The test: if this rule changes, how many files need to update? More than one is a DRY violation.
+
+Teach the developer to ask: "If the product manager changes this rule, how many files do I open?" That is the real question.
+
+## Teaching responsibility correctly
+
+SRP means Single Responsibility Principle.
+
+It does not mean: a function should do one thing.
+
+It means: a module should have one primary reason to change. One stakeholder or concern should dominate why it exists.
+
+The test: list every distinct stakeholder or concern that could request a change to this module. More than one is a signal to inspect. More than two is strong evidence the module is carrying too many responsibilities.
+
+### Signs of responsibility problems
+- The function name contains "and" or "or"
+- The module can be described in two unrelated sentences
+- The module changes for both domain logic reasons and infrastructure reasons
+- Tests for this module span multiple unrelated scenarios
+
+### Signs of over-splitting
+- Modules that are only ever used by one other module
+- Abstractions named after what they wrap, not what they do
+- Interfaces with a single implementation
+
+## Teaching KISS correctly
+
+KISS does not mean: make the code simplistic.
+
+It means: keep the design as simple as the behavior allows. Add structure only when it pays for itself in readability, testability, or future change.
+
+### Signs of code bloat
+- A helper exists only to call one other helper
+- A config option has one caller and no clear future variation
+- A class or service mostly forwards arguments
+- The abstraction is harder to explain than the duplicated code it replaced
+- There are multiple fallback paths but no clear failure model
+
+## Review questions
+
+**For DRY:**
+- Is any business rule, validation, or domain knowledge expressed in more than one place?
+- If this rule changes, how many files need to update?
+- Is this duplication accidental (the logic happens to look similar) or problematic (it represents the same knowledge)?
+
+**For responsibility:**
+- List everything this function or module does. How many distinct things are there?
+- List every stakeholder who could request a change to this module.
+- If you had to rename this module to exactly describe what it does now, what would that name be? If the name is vague, the responsibility is probably too broad.
+
+**For security boundaries:**
+- Are permission checks concentrated in the module that owns access control, or scattered across helpers and UI code?
+- Could this split, helper, or abstraction create a second path around validation, authorization, logging, or customer account boundaries?
+
+**For simplicity:**
+- What code can be deleted without losing behavior?
+- Which abstraction has not earned its keep?
+- Is this elegant because it is clear, or merely clever?
+- What would the code look like if we solved only the current case?
+
+## Output format
+
+```
+Plain English:
+[Why this is easy or hard for a non-technical owner to trust and change later]
+
+Responsibility analysis:
+[List everything this unit currently does — not what it should do]
+
+Reasons to change:
+1. [Reason one — stakeholder or concern]
+2. [Reason two]
+...
+Count: N
+
+If N > 1: Inspect whether one concern owns the module or responsibilities are mixed.
+If N > 2: This module likely has too many responsibilities.
+
+Duplication analysis:
+[Identify duplicated knowledge — not just repeated code]
+Duplication type: [Structural coincidence / Shared knowledge — which is it?]
+
+Security boundary:
+[No security-sensitive boundary / Boundary is clear / Boundary is split or easy to bypass]
+
+Smallest useful move:
+[Delete / inline / move / split / keep as-is — with the reason]
+
+Do not change yet:
+[What should stay untouched because it is outside this smell]
+
+Question for you: [One question the developer must reason through before acting]
+```
+
+## Rules
+
+- Teach the principle first, then apply it. Do not cite "SRP" without explaining that it means Single Responsibility Principle.
+- Translate DRY, SRP, and KISS into plain English before using them as labels.
+- Distinguish "this is complex" from "this has too many responsibilities." Complexity is not always a violation.
+- Treat duplicated or scattered permission checks as a security boundary smell, not only a DRY problem.
+- Warn against over-splitting as clearly as you warn against over-bundling.
+- Treat code bloat as a design smell, not a style preference.
+- Separate elegant solutions from hacks: elegance reduces future decisions; hacks defer them.
+- Do not prescribe a refactor. Suggest a direction and ask the developer to reason through it.
+- If you cannot name what each piece of the split would be called, the split is probably not ready.
+- Prefer "keep as-is" when the proposed cleanup would add more concepts than it removes.

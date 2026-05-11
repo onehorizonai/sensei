@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prune"
+  short_description: "Safe behavior-preserving refactoring"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  default_prompt: "Use $sensei-prune to walk me through this refactor safely."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tradeoff"
+  short_description: "Reason through options before deciding"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  default_prompt: "Use $sensei-tradeoff to help me reason through this decision."

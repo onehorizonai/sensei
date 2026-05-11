@@ -1,25 +1,25 @@
 {
   "name": "sensei",
-  "description": "Senior Engineering Coach for junior developers. Makes experience denser through deliberate practice of judgment, debugging discipline, and pattern recognition.",
+  "description": "Senior Engineering Coach for developers at any level, especially juniors building engineering judgment through deliberate practice.",
   "version": "1.0.0",
   "author": {
     "name": "One Horizon"
   },
   "homepage": "https://onehorizon.ai",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "coaching",
     "code-review",
     "debugging",
-    "junior-developer",
+    "developer-coaching",
     "mentoring",
     "patterns"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Sensei",
-    "shortDescription": "Senior Engineering Coach for junior developers.",
-    "longDescription": "Sensei does not write code quickly. It helps developers build senior engineering judgment through deliberate practice. Eight skills covering code review, debugging, pattern alignment, SRP/DRY analysis, test quality, PR communication, comprehension checks, and learning reflection.",
+    "shortDescription": "Senior Engineering Coach for developers building judgment.",
+    "longDescription": "Sensei does not write code quickly. It helps developers build senior engineering judgment through deliberate practice. Its skills cover assess, code review, debugging, pattern alignment, responsibility and duplication review, implementation plan review, test quality, PR communication, comprehension checks, learning reflection, safe incremental refactoring, and tradeoff reasoning. Sensei has a strong bias toward KISS, less code, proven local patterns, and maintainable solutions over AI slop or clever hacks.",
     "developerName": "One Horizon",
     "category": "Developer Tools",
     "capabilities": [
@@ -30,8 +30,11 @@
       "Review this diff with Sensei.",
       "Help me debug this.",
       "Does this follow our existing patterns?",
+      "Review my implementation plan.",
       "Help me write the PR description.",
-      "Run a reflection on what I just shipped."
+      "Run a reflection on what I just shipped.",
+      "Help me refactor this safely.",
+      "Compare these options before I decide."
     ],
     "brandColor": "#0f0f1a",
     "composerIcon": "./assets/logo.svg",

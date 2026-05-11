@@ -1,6 +1,0 @@
-interface:
-  display_name: "Sensei"
-  short_description: "Auto-detects git context and routes to the right coaching skill"
-  icon_small: "../../assets/logo.svg"
-  icon_large: "../../assets/logo.svg"
-  default_prompt: "Run Sensei."
