@@ -61,20 +61,42 @@ Less is more here too. A new pattern has to earn its place. If the existing code
 
 ## Output format
 
-```
-Pattern examined: [What is being checked]
-Plain English: [What this means for someone who only needs to know whether the code will be harder to maintain]
-Closest existing example: [File path and module name, or "none found"]
-Evidence read: [Files or modules inspected]
-Alignment: [Aligned / Diverges / Partially aligned]
-Security pattern: [Aligned / Diverges / Not applicable — with evidence]
+Open with this block:
 
-If diverges or partially aligned:
-What differs: [Specific, concrete differences]
-Impact: [Why this matters — or why it might be acceptable in this case]
-Smallest alignment move: [One change that would bring this closer to the local pattern, if needed]
-Question for you: [Force the developer to articulate the reason for the divergence]
 ```
+---
+## TLDR
+[Sentence 1: what was checked and whether it fits the existing codebase]
+[Sentence 2: the most important divergence, or "no action needed"]
+
+**Verdict: Aligned / Needs alignment / Unintentional divergence — fix this**
+---
+```
+
+For each divergence found:
+
+```
+### [MUST ALIGN / SHOULD ALIGN / INTENTIONAL — DOCUMENT IT] — [Plain-English name of what differs]
+[One sentence: what is different and what it means for future maintainers]
+**What breaks:** [Concrete maintenance cost — two patterns to learn, security bypass risk, or hidden coupling]
+**Closest existing example:** [file:path or "none found"]
+**Do this:** [The smallest change that brings this in line with the existing pattern]
+
+> _For the curious: [Optional: why the local pattern exists, or the reasoning question for developers who want to understand the tradeoff]_
+```
+
+Close with:
+
+```
+---
+### Security pattern
+[Aligned with local security conventions / **Diverges: [name the risk]** / Not applicable]
+
+### What you did well
+[Specific things that show pattern awareness — never skip]
+```
+
+If the code is fully aligned, say that clearly and name what was checked.
 
 ## Rules
 

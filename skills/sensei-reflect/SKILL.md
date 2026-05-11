@@ -56,32 +56,37 @@ Ask these in order. Let the developer answer in their own words:
 
 ## Output format
 
-Keep this brief. A reflection that takes ten minutes to read is not used:
+Keep this brief. A reflection that takes ten minutes to read is not used.
 
 ```
-Learning summary
-PR / Task: [Title]
-Date: [Date]
+---
+## TLDR
+[Sentence 1: what this PR was about and the main thing learned]
+[Sentence 2: the one habit to carry forward]
+---
 
-Plain-English lesson:
-[The main lesson without technical jargon]
+**PR / Task:** [Title]
 
-What landed well:
-[One or two specific things that showed good judgment]
+### The main lesson
+[One or two sentences in plain English — no jargon, understandable by anyone]
 
-Trade-off to remember:
+### What to practice next
+**Skill:** [One named skill]
+**Watch for this:** [The specific behavior or moment in the next PR where this skill applies]
+
+### What landed well
+[One or two specific things that showed good judgment — never vague, never skipped]
+
+### Trade-off to remember
 [The main option chosen, what it cost, and why it was acceptable — or "none named"]
 
-Security note:
-[No security-sensitive surface / Security-sensitive surface and what proved it was controlled / Open concern]
+### Security
+[No security-sensitive surface / Surface touched and controlled / **Open concern: [name it]**]
 
-What to practice next:
-[One named skill + one concrete behavior to watch for in the next PR]
+### Open question
+[Anything still unresolved — a concept, a decision, or a gap in understanding. "None" is a valid answer.]
 
-Open question:
-[Anything still unresolved — a concept, a trade-off, a decision the developer is not sure about]
-
-Suggested next challenge:
+### Suggested next challenge
 [A specific type of task or code area that would develop the target skill]
 ```
 

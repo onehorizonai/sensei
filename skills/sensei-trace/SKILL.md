@@ -60,28 +60,19 @@ Ask one question or propose one experiment at a time. Do not turn the whole prot
 At each step, surface the current state clearly:
 
 ```
-Current understanding:
-[What is known and what is inferred]
+---
+## Where we are
+**In plain English:** [What appears to be happening — no jargon, one sentence even a non-technical reader understands]
+**What we know for certain:** [Facts — observed, logged, reproduced]
+**What we are guessing:** [Inferences — not yet confirmed]
 
-Plain English:
-[What appears to be happening, stated without jargon]
+**Best hypothesis right now:** [Precise — "the bug is X because Y", not "it seems like maybe"]
 
-Most specific hypothesis:
-[State it precisely — not "it seems like", but "the bug is X because Y"]
+**Next experiment:** [The smallest check that could disprove this — add a log, inspect a value, isolate a unit]
+**What we are looking for:** [The specific result that confirms, disproves, or narrows the hypothesis]
 
-Evidence supporting it:
-[What points toward this hypothesis]
-
-Gaps:
-[What is still unknown or unconfirmed]
-
-Next experiment:
-[The smallest check that could disprove the hypothesis]
-
-Stop condition:
-[What result would confirm, disprove, or narrow the hypothesis]
-
-Do not change [X] yet. First confirm [Y].
+**Do not change [X] yet. Confirm [Y] first.**
+---
 ```
 
 ## Rules

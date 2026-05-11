@@ -64,45 +64,82 @@ Check in this order:
 
 ## Output format
 
-Use this format:
+Open every plan review with this block:
 
-```text
-Plan summary:
-[Restate the plan in two or three sentences. If you cannot restate it clearly, the plan is not ready.]
+```
+---
+## TLDR
+[Sentence 1: what the plan is trying to do and whether the approach fits the codebase]
+[Sentence 2: the most important thing to resolve before writing a line of code]
 
-Architecture fit:
-[Aligned / Partially aligned / Diverges]
+**Verdict: Good to build / Fix the plan first / Stop and rethink**
+---
+```
 
-Plain-English read:
-[What this plan means for a non-technical stakeholder: safe to try, risky, too broad, or unclear]
+Then for each issue, use this format:
 
-Closest existing pattern:
-[File path and module name, or "none found"]
+```
+### [MUST RESOLVE / SHOULD RESOLVE / WATCH OUT] — [Plain-English name, not a pattern label]
+[One sentence anyone can understand: what the risk or problem is]
+**What breaks:** [Specific consequence — what gets harder, breaks, or costs the team later]
+**Do this before coding:** [Concrete action or decision to make first]
 
-Evidence read:
-[Files, modules, or docs inspected before judging architecture fit]
+> _For the curious: [Optional: architectural principle, pattern name, or deeper reasoning question]_
+```
 
-Optional specialist checks used:
-[Skill names that materially changed the review. Omit this line unless a specialist changed the feedback or the user asked for an audit trail.]
+Close with:
 
-Security/privacy check:
-[No obvious security-sensitive surface named / Surface named and controlled / Missing decision or risk]
+```
+---
+### Smallest plan that could work
+[The minimum version that fits the existing architecture and still proves the behavior — one short paragraph]
 
-Risks:
-1. [Concrete risk]
-2. [Concrete risk]
+### Security / privacy
+[No security-sensitive surface named / Surface named and controlled / **Missing decision: [name it]**]
 
-Missing decisions:
-[What the developer still needs to decide before coding]
+### What you did well
+[Specific things that show clear thinking — never skip]
 
-Suggested adjustment:
-[One or two directions, not a full rewritten plan]
+### One thing to sharpen
+[Single named decision or habit to improve before the next plan]
+```
 
-Smallest plan that could work:
-[The minimum version that fits the architecture and still proves the behavior]
+If the plan cannot be restated clearly in two sentences, it is not ready to review — say so and ask for a clearer version before continuing.
 
-Question for you:
-[One question the developer must answer before implementing]
+## Example output
+
+```
+---
+## TLDR
+Plan adds an `AuthGuard` component to protect the settings route. The approach works but invents a new auth pattern when `withAuth` already handles this for 12 other routes.
+
+**Verdict: Fix the plan first**
+---
+
+### MUST RESOLVE — New auth pattern when one already exists
+The plan creates a new `AuthGuard` component, but `withAuth` in `src/middleware/auth.js` already protects every other route in the app. Adding `AuthGuard` means two ways to protect a route — future developers will not know which one to use, and one will drift.
+**What breaks:** Inconsistent access control. The next person adding a protected route picks the wrong pattern. A misconfigured `AuthGuard` silently skips the permission check that `withAuth` enforces.
+**Do this before coding:** Use `withAuth` the same way `pages/dashboard.js:8` does. Delete the `AuthGuard` plan entirely.
+
+> _For the curious: This is about pattern alignment — a codebase's internal consistency is what makes it possible to reason about it as a whole. Two patterns for the same problem means two things to learn and two places security bugs can hide._
+
+### WATCH OUT — No test plan for the blocked state
+The plan describes testing the authenticated route but does not mention testing that an unauthenticated user is actually blocked.
+**What breaks:** The happy path passes; a misconfigured redirect lets unauthenticated users through in production.
+**Do this before coding:** Add to the plan: "Test that hitting `/settings` while logged out redirects to `/login` and does not render any settings content."
+
+---
+### Smallest plan that could work
+Wrap the settings page export with `withAuth` from `src/middleware/auth.js`. Add one test confirming unauthenticated users are redirected. No new files, no new patterns.
+
+### Security / privacy
+Auth surface touched. The plan names the protected route but does not specify what `withAuth` checks (session token vs. role). Confirm the existing check is sufficient before coding.
+
+### What you did well
+The plan named the specific route and described the expected redirect behavior clearly. That is the right level of detail for a plan review.
+
+### One thing to sharpen
+Before planning a new helper or component: search for the existing solution first. `grep -r "withAuth"` would have found the pattern immediately.
 ```
 
 ## Rules

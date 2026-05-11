@@ -106,36 +106,35 @@ Stop when the named smell is gone. Do not chase adjacent cleanup in the same loo
 
 ## Output format
 
+Open with this block:
+
 ```
-Plain English:
-[What will change for maintainers, and what must not change for users]
+---
+## TLDR
+[Sentence 1: what is being cleaned up and whether it is ready to start]
+[Sentence 2: the one thing that must happen before the first move]
 
-Change type:
-[Pure refactor / Mixed with behavior change / Not ready]
+**Status: Ready to refactor / Blocked — [specific blocker] / Stop — this is a behavior change, not a refactor**
+---
+```
 
-Current behavior (what must be preserved):
-[Precisely stated — not what the code should do, what it currently does]
+Then for each step:
 
-Test coverage:
-[Exists and covers this path / Missing — characterization test required first]
+```
+### Readiness check
+**Change type:** [Pure refactor / Mixed with behavior change — split before continuing / Not ready]
+**Current behavior to preserve:** [Precisely stated — what the code actually does today, not what it should do]
+**Test coverage:** [Covers this path / **Missing — write a characterization test first**]
+**Security-sensitive behavior:** [Covered / **Missing: [name what must be verified]** / Not applicable]
 
-Security-sensitive behavior:
-[Allowed and blocked behavior covered / Security-sensitive surface but coverage missing / Not applicable]
+### The smell
+[One sentence in plain English: what is wrong and what it costs]
+**Why it matters:** [Specific consequence — what gets harder, breaks, or costs the team if left as-is]
 
-Smell identified:
-[Name + why it matters — be specific]
-
-First move:
-[The single smallest behavior-preserving change]
-
-Verification step:
-[How to confirm behavior was preserved after this move]
-
-Stop condition:
-[What tells you this refactor is done]
-
-Question for you:
-[One thing the developer must answer before proceeding]
+### First move
+**Do this:** [The single smallest behavior-preserving change — rename / extract one function / delete dead code / inline a helper]
+**Then run:** [How to verify behavior was preserved — which test to run or check to make]
+**Stop when:** [What tells you this refactor is done — not "when it looks clean", but a concrete signal]
 ```
 
 ## Rules

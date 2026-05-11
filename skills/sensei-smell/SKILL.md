@@ -83,36 +83,41 @@ It means: keep the design as simple as the behavior allows. Add structure only w
 
 ## Output format
 
+Open with this block:
+
 ```
-Plain English:
-[Why this is easy or hard for a non-technical owner to trust and change later]
+---
+## TLDR
+[Sentence 1: what this code does and the biggest structural problem]
+[Sentence 2: what to do about it — or "no action needed"]
 
-Responsibility analysis:
-[List everything this unit currently does — not what it should do]
+**Verdict: Clean / Has smells — see below / Needs redesign before touching**
+---
+```
 
-Reasons to change:
-1. [Reason one — stakeholder or concern]
-2. [Reason two]
-...
-Count: N
+For each smell found:
 
-If N > 1: Inspect whether one concern owns the module or responsibilities are mixed.
-If N > 2: This module likely has too many responsibilities.
+```
+### [MUST FIX / SHOULD FIX / CONSIDER] — [Plain-English name — never just cite DRY/SRP/KISS without explaining]
+[One sentence: what the problem is and what it costs]
+**What breaks:** [Specific consequence — "if this rule changes, N files need updating and one will be missed" / "this is the second way to do X, and they'll drift"]
+**Do this:** [The smallest useful move: delete / inline / move / split — stated as a concrete action]
 
-Duplication analysis:
-[Identify duplicated knowledge — not just repeated code]
-Duplication type: [Structural coincidence / Shared knowledge — which is it?]
+> _For the curious: [Optional: the principle behind it (DRY means one authoritative source, SRP means one reason to change, etc.) and a reasoning question for developers who want to go deeper]_
+```
 
-Security boundary:
-[No security-sensitive boundary / Boundary is clear / Boundary is split or easy to bypass]
+Close with:
 
-Smallest useful move:
-[Delete / inline / move / split / keep as-is — with the reason]
+```
+---
+### Security boundary
+[No security-sensitive boundary / Boundary is clear / **Split or easy to bypass: [name it]**]
 
-Do not change yet:
-[What should stay untouched because it is outside this smell]
+### Do not change yet
+[What should stay untouched because it is out of scope for this smell]
 
-Question for you: [One question the developer must reason through before acting]
+### What you did well
+[Specific structural choices that show good judgment — never skip]
 ```
 
 ## Rules

@@ -94,37 +94,51 @@ The developer makes the decision. Sensei does not. If the developer asks Sensei 
 
 ## Output format
 
+Open with this block:
+
 ```
-Decision frame:
-[The decision being made, in one sentence]
+---
+## TLDR
+[Sentence 1: what the decision is and what is at stake]
+[Sentence 2: which option fits better given the constraints, or "both are viable — here is what separates them"]
 
-Plain-English decision:
-[The choice and consequence in words a non-technical stakeholder can understand]
+**Status: Decision ready / Still missing: [name the unknown]**
+---
+```
 
-Options:
-A: [Precise one-sentence statement]
-B: [Precise one-sentence statement]
+Then lay out the reasoning:
 
-Local precedent:
-[Relevant existing pattern or "none found"]
+```
+### The decision
+[One sentence — what is being chosen between]
 
-Constraints that matter:
-[The actual constraints — team, codebase, behavior, security/privacy, performance, reversibility, timeline]
+**In plain English:** [What this means for a non-technical stakeholder: what gets easier, what gets harder, who is affected]
 
-Tradeoffs:
-- A optimizes for: [Specific — what it makes easy]
-- A gives up: [Specific — what it makes harder]
-- B optimizes for: [Specific — what it makes easy]
-- B gives up: [Specific — what it makes harder]
+### Option A — [Short label]
+- **Makes easy:** [Specific — what it rewards]
+- **Makes hard:** [Specific — what it punishes or costs later]
 
-Reversibility:
-[Which option is easier to unwind, and why]
+### Option B — [Short label]
+- **Makes easy:** [Specific — what it rewards]
+- **Makes hard:** [Specific — what it punishes or costs later]
 
-Evidence needed:
-[What would change the decision or reduce the biggest uncertainty]
+### What the constraints say
+[Local precedent: file path or "none found"]
+[Actual constraints that drive the decision: team, codebase pattern, behavior, security/privacy, reversibility, timeline]
 
-Question for you:
-[One question the developer must answer to own the decision]
+### Reversibility
+[Which option is cheaper to undo and why — or "both are hard to reverse: [consequence]"]
+
+### What would change this decision
+[The one piece of evidence, experiment, or metric that would flip the answer]
+```
+
+Close with:
+
+```
+---
+**Make the call:** State your choice in one sentence you could defend to a teammate.
+[Developer writes this — Sensei does not fill it in]
 ```
 
 ## Rules
