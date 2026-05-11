@@ -1,6 +1,5 @@
 ---
 name: sensei-smell
-title: Sensei Smell
 description: Analyze code for responsibility, boundary, abstraction, code-bloat, and duplicated-knowledge problems. Use when a function or module seems to be doing too many things, when the same business rule appears in multiple places, when the developer asks about SRP, DRY, KISS, code smells, or whether code is too complex, or when reviewing whether a split or abstraction is justified.
 ---
 

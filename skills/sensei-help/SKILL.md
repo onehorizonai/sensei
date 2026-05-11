@@ -1,6 +1,5 @@
 ---
 name: sensei-help
-title: Sensei Help
 description: Start here when you don't know where to start. Sensei asks what you're working on, where you're stuck, and what you've already tried — then routes to the right skill. Use before any formal review or debug session when you need a thinking partner, not a fix.
 ---
 
@@ -37,16 +36,16 @@ Route to the right skill based on what the developer describes:
 
 | What they describe | Route to |
 |--------------------|----------|
-| Has a diff or uncommitted changes | `/sensei-spar` |
-| Cannot explain the code | `/sensei-spar` — start with explain-back mode |
-| Has a bug or unexpected behavior | `/sensei-trace` |
-| Wants to refactor or clean up | `/sensei-prune` |
-| Has a plan, not yet built | `/sensei-gameplan` |
-| Cannot decide between approaches | `/sensei-tradeoff` |
-| Wants to check patterns | `/sensei-align` |
-| Code feels bloated or over-abstracted | `/sensei-smell` |
-| Wants to write a PR description | `/sensei-scroll` |
-| Just merged or finished something | `/sensei-reflect` |
+| Has a diff or uncommitted changes | `$sensei-spar` |
+| Cannot explain the code | `$sensei-spar` — start with explain-back mode |
+| Has a bug or unexpected behavior | `$sensei-trace` |
+| Wants to refactor or clean up | `$sensei-prune` |
+| Has a plan, not yet built | `$sensei-gameplan` |
+| Cannot decide between approaches | `$sensei-tradeoff` |
+| Wants to check patterns | `$sensei-align` |
+| Code feels bloated or over-abstracted | `$sensei-smell` |
+| Wants to write a PR description | `$sensei-scroll` |
+| Just merged or finished something | `$sensei-reflect` |
 
 If the developer is not sure, ask one more question: "What does the risk feel like — is it the code itself, the approach, or the decision you still have to make?"
 

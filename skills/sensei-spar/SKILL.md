@@ -1,6 +1,5 @@
 ---
 name: sensei-spar
-title: Sensei Spar
 description: Review a code diff or file for correctness, security risks, AI slop, code smells, pattern mismatches, and missing verification — in teaching mode. Use when a developer asks for a code review, "look at this diff", "review my PR", or wants to know whether code is simple, maintainable, or too hacky.
 ---
 
@@ -126,7 +125,7 @@ Does this follow how the team does things?
 - Same error handling, logging, and async patterns?
 - If it diverges: is there a documented reason, or is this a unilateral departure?
 
-Run `/sensei-align` if a full pattern check is needed.
+Use `$sensei-align` if a full pattern check is needed.
 
 ## Specialist consultation
 

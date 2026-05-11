@@ -1,6 +1,5 @@
 ---
 name: sensei-tradeoff
-title: Sensei Tradeoff
 description: Help a developer reason through a design decision by naming options, costs, constraints, reversibility, and what would change the decision. Use when a developer says "should I use X or Y", "help me decide", "what's the tradeoff", or "is this the right architecture". If the decision claims architecture fit, read the closest local precedent before judging. Do not decide for the developer.
 ---
 

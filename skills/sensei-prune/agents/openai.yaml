@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Prune"
-  short_description: "Guide safe, incremental, behavior-preserving refactoring one step at a time."
+  short_description: "Guide safe, incremental refactoring."
   default_prompt: "Use $sensei-prune to help me refactor this safely."

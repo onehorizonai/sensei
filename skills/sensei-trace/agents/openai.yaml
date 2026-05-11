@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Trace"
-  short_description: "Debug through hypothesis and experiment — no fixes until a hypothesis is confirmed."
+  short_description: "Debug with hypotheses and experiments."
   default_prompt: "Use $sensei-trace to help me debug this without jumping to a fix."

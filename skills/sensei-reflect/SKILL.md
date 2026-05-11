@@ -1,6 +1,5 @@
 ---
 name: sensei-reflect
-title: Sensei Reflect
 description: Run a post-merge or post-session reflection to capture what was learned and identify what to practice next. Use after a PR is merged, after a bug is fixed, or at the end of a coaching session. Keep it short enough to review in two minutes.
 ---
 

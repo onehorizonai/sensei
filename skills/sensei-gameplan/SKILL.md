@@ -1,6 +1,5 @@
 ---
 name: sensei-gameplan
-title: Sensei Gameplan
 description: Review a coding or implementation plan against the existing architecture before code is written. Use when a developer shares a plan, asks "does this plan make sense?", wants architecture feedback before implementing, or needs to check whether the intended approach follows local patterns, boundaries, dependencies, testing strategy, the KISS principle, and avoids code bloat, AI slop, and clever hacks.
 ---
 
@@ -156,5 +155,5 @@ Before planning a new helper or component: search for the existing solution firs
 - If the plan reads like generated boilerplate, ask which parts are actually needed.
 - If the plan depends on an assumption, turn that assumption into a question or experiment.
 - If the plan is too vague to review, stop and ask for a clearer plan.
-- If two approaches are plausible, route to `/sensei-tradeoff` instead of deciding for the developer.
+- If two approaches are plausible, use `$sensei-tradeoff` instead of deciding for the developer.
 - Explain architectural concerns in plain English before naming the technical pattern.

@@ -1,6 +1,5 @@
 ---
 name: sensei-prune
-title: Sensei Prune
 description: Guide a developer through safe, incremental, behavior-preserving refactoring. Use when a developer says "I want to refactor this", "how do I clean this up safely", or "there's tech debt here". If the request changes behavior, route to gameplan or trace first. Do not write the refactored code; help the developer choose the next verified move.
 ---
 
@@ -21,7 +20,7 @@ The path always runs in the same order: understand → characterize → name the
 Classify the request first:
 
 - Pure refactor: behavior must stay the same.
-- Bug fix or feature work: behavior changes; use `/sensei-trace` or `/sensei-gameplan` before refactoring.
+- Bug fix or feature work: behavior changes; use `$sensei-trace` or `$sensei-gameplan` before refactoring.
 - Mixed request: ask the developer to split behavior change from cleanup.
 
 Then ask the developer to describe what the code currently does — not what it should do, what it actually does today. If code is available, read the relevant files before naming the smell.
@@ -70,7 +69,7 @@ Name it:
 - Deeply nested logic (decision trees that are hard to reason about flat)
 ```
 
-If the developer cannot name the smell, run `/sensei-smell` first. Do not refactor toward a vague goal.
+If the developer cannot name the smell, use `$sensei-smell` first. Do not refactor toward a vague goal.
 
 ### Step 4 — Smallest first move
 
@@ -146,7 +145,7 @@ Then for each step:
 - Explain "behavior-preserving" as: users should not notice a change, but future maintainers should have an easier time.
 - If refactoring security-sensitive code, preserving behavior includes preserving who is blocked, not just who is allowed.
 - Do not write the refactored code. Suggest the move, let the developer make it.
-- If the developer cannot name the smell, run `/sensei-smell` first.
+- If the developer cannot name the smell, use `$sensei-smell` first.
 - If the developer cannot describe current behavior, ask them to read the code before continuing.
 - A refactor the developer cannot explain is a rewrite they do not own.
 - Separate "this code is wrong" (bug) from "this code is hard to change" (smell). They require different responses.

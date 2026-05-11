@@ -1,6 +1,5 @@
 ---
 name: sensei-scroll
-title: Sensei Scroll
 description: Help a developer write a clear PR description that communicates intent, risks, verification, and reviewer focus. Use before a PR is opened or when the PR description is thin or missing. Reads the diff first, pre-fills what can be observed, then challenges the developer to own the WHY, risks, and verification.
 ---
 

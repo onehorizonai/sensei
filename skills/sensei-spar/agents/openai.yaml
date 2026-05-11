@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Spar"
-  short_description: "Review a diff for correctness, security risks, smells, and missing verification."
+  short_description: "Review diffs for risks, smells, and test gaps."
   default_prompt: "Use $sensei-spar to review this diff."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Gameplan"
-  short_description: "Review an implementation plan against the architecture before writing code."
+  short_description: "Review an implementation plan before coding."
   default_prompt: "Use $sensei-gameplan to review my plan before I start coding."

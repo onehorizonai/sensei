@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Smell"
-  short_description: "Analyze code for responsibility, boundary, and duplicated-knowledge problems."
+  short_description: "Find bloat, weak boundaries, and duplication."
   default_prompt: "Use $sensei-smell to analyze this code for responsibility and duplication issues."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Reflect"
-  short_description: "Post-merge reflection to capture what was learned and what to practice next."
+  short_description: "Capture lessons after a PR or session."
   default_prompt: "Use $sensei-reflect to capture what I learned from this PR."

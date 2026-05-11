@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Scroll"
-  short_description: "Write a clear PR description that communicates intent, risks, and verification."
+  short_description: "Draft PR descriptions with risks and verification."
   default_prompt: "Use $sensei-scroll to help me write the PR description."

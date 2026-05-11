@@ -1,4 +1,4 @@
 interface:
   display_name: "Sensei Tradeoff"
-  short_description: "Reason through a design decision by naming options, costs, constraints, and reversibility."
+  short_description: "Compare options, costs, and reversibility."
   default_prompt: "Use $sensei-tradeoff to help me think through this decision."

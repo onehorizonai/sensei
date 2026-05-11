@@ -119,17 +119,17 @@ If none of A–D match, do not guess. Ask:
 No clear git context detected. What are you working on?
 
 I can:
-  /sensei-spar    — review uncommitted changes or a diff
-  /sensei-trace    — guide you through a bug
-  /sensei-align  — check if your change follows existing patterns
-  /sensei-smell — analyze boundaries and duplicated knowledge
-  /sensei-gameplan   — review a coding plan against the architecture
-  /sensei-prove-it     — evaluate what your tests actually prove
-  /sensei-scroll    — help you write a PR description
-  /sensei-help   — walk me through the code before I review it
-  /sensei-reflect     — post-merge learning capture
-  /sensei-prune — refactor safely, one verified move at a time
-  /sensei-tradeoff — compare options, costs, constraints, and reversibility
+  $sensei-spar    — review uncommitted changes or a diff
+  $sensei-trace    — guide you through a bug
+  $sensei-align  — check if your change follows existing patterns
+  $sensei-smell — analyze boundaries and duplicated knowledge
+  $sensei-gameplan   — review a coding plan against the architecture
+  $sensei-prove-it     — evaluate what your tests actually prove
+  $sensei-scroll    — help you write a PR description
+  $sensei-help   — walk me through the code before I review it
+  $sensei-reflect     — post-merge learning capture
+  $sensei-prune — refactor safely, one verified move at a time
+  $sensei-tradeoff — compare options, costs, constraints, and reversibility
 ```
 
 ---

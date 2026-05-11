@@ -1,6 +1,5 @@
 ---
 name: sensei-prove-it
-title: Sensei Prove It
 description: Evaluate what the tests actually prove and what they miss. Use when reviewing a PR's test coverage, when a developer says "I wrote tests", or when you want to challenge the developer to reason about test quality — not just test quantity.
 ---
 
