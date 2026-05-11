@@ -1,5 +1,6 @@
 ---
 name: sensei-spar
+title: Sensei Spar
 description: Review a code diff or file for correctness, security risks, AI slop, code smells, pattern mismatches, and missing verification — in teaching mode. Use when a developer asks for a code review, "look at this diff", "review my PR", or wants to know whether code is simple, maintainable, or too hacky.
 ---
 

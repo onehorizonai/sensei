@@ -1,6 +1,4 @@
 interface:
-  display_name: "Gameplan"
-  short_description: "Review a plan before building"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
-  default_prompt: "Use $sensei-gameplan to review my plan before I build it."
+  display_name: "Sensei Gameplan"
+  short_description: "Review an implementation plan against the architecture before writing code."
+  default_prompt: "Use $sensei-gameplan to review my plan before I start coding."

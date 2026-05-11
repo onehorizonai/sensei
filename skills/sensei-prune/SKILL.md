@@ -1,5 +1,6 @@
 ---
 name: sensei-prune
+title: Sensei Prune
 description: Guide a developer through safe, incremental, behavior-preserving refactoring. Use when a developer says "I want to refactor this", "how do I clean this up safely", or "there's tech debt here". If the request changes behavior, route to gameplan or trace first. Do not write the refactored code; help the developer choose the next verified move.
 ---
 

@@ -1,5 +1,6 @@
 ---
 name: sensei-help
+title: Sensei Help
 description: Start here when you don't know where to start. Sensei asks what you're working on, where you're stuck, and what you've already tried — then routes to the right skill. Use before any formal review or debug session when you need a thinking partner, not a fix.
 ---
 

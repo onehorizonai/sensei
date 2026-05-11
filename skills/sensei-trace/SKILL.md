@@ -1,5 +1,6 @@
 ---
 name: sensei-trace
+title: Sensei Trace
 description: Guide a developer through debugging without jumping to a fix. Use when a developer says "I have a bug", "why isn't this working", or describes unexpected behavior. Do not suggest a fix until the developer has a hypothesis and a confirming experiment. The goal is to teach the debugging process, not to find the bug.
 ---
 

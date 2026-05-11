@@ -1,6 +1,4 @@
 interface:
-  display_name: "Assess"
-  short_description: "Inspect git state and route"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
-  default_prompt: "Use $sensei-assess to read the situation and tell me where to start."
+  display_name: "Sensei Assess"
+  short_description: "Auto-detect context and route to the right Sensei skill."
+  default_prompt: "Use $sensei-assess to detect my current context and route to the right skill."

@@ -1,6 +1,4 @@
 interface:
-  display_name: "Scroll"
-  short_description: "PR description with intent and risks"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
+  display_name: "Sensei Scroll"
+  short_description: "Write a clear PR description that communicates intent, risks, and verification."
   default_prompt: "Use $sensei-scroll to help me write the PR description."

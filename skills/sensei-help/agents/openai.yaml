@@ -1,6 +1,4 @@
 interface:
-  display_name: "Help"
-  short_description: "Tell me what's next, Sensei"
-  icon_small: "../../assets/logo.svg"
-  icon_large: "../../assets/logo.svg"
-  default_prompt: "Use $sensei-help — I'm not sure where to start."
+  display_name: "Sensei Help"
+  short_description: "Not sure where to start — Sensei asks what you need and routes to the right skill."
+  default_prompt: "Use $sensei-help to figure out where to start."

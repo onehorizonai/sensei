@@ -1,6 +1,4 @@
 interface:
-  display_name: "Reflect"
-  short_description: "Post-merge learning capture"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
-  default_prompt: "Use $sensei-reflect to capture what I learned from this."
+  display_name: "Sensei Reflect"
+  short_description: "Post-merge reflection to capture what was learned and what to practice next."
+  default_prompt: "Use $sensei-reflect to capture what I learned from this PR."

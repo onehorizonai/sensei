@@ -1,5 +1,6 @@
 ---
 name: sensei-gameplan
+title: Sensei Gameplan
 description: Review a coding or implementation plan against the existing architecture before code is written. Use when a developer shares a plan, asks "does this plan make sense?", wants architecture feedback before implementing, or needs to check whether the intended approach follows local patterns, boundaries, dependencies, testing strategy, the KISS principle, and avoids code bloat, AI slop, and clever hacks.
 ---
 

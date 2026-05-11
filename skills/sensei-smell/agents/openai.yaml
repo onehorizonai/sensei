@@ -1,6 +1,4 @@
 interface:
-  display_name: "Smell"
-  short_description: "Responsibility, boundaries, duplication"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
-  default_prompt: "Use $sensei-smell to check if this code is doing too much."
+  display_name: "Sensei Smell"
+  short_description: "Analyze code for responsibility, boundary, and duplicated-knowledge problems."
+  default_prompt: "Use $sensei-smell to analyze this code for responsibility and duplication issues."

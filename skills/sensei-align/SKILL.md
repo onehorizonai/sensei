@@ -1,5 +1,6 @@
 ---
 name: sensei-align
+title: Sensei Align
 description: Compare a code change against the existing codebase to check pattern alignment. Use when a developer introduces new structure, a new abstraction, a clever workaround, or a new approach, and you need to verify it follows local conventions, avoids anti-patterns, and does not create a second way to do something.
 ---
 

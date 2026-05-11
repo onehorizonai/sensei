@@ -1,6 +1,4 @@
 interface:
-  display_name: "Trace"
-  short_description: "Hypothesis-driven debugging"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/icon.svg"
-  default_prompt: "Use $sensei-trace to help me find this bug."
+  display_name: "Sensei Trace"
+  short_description: "Debug through hypothesis and experiment — no fixes until a hypothesis is confirmed."
+  default_prompt: "Use $sensei-trace to help me debug this without jumping to a fix."
